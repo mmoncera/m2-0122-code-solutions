@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="column-third">
+          <i class="fas fa-angle-left navigation previous"></i>
+        </div>
+        <div class="column-third">
+          <img class="pokemon" src="./images/001.png" alt="bulbasaur" />
+          <img class="pokemon hidden" src="./images/004.png" alt="charmander" />
+          <img class="pokemon hidden" src="./images/007.png" alt="squirtle" />
+          <img class="pokemon hidden" src="./images/025.png" alt="pikachu" />
+          <img class="pokemon hidden" src="./images/039.png" alt="jigglypuff" />
+        </div>
+        <div class="column-third">
+          <i class="fas fa-angle-right navigation next"></i>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column-full progress-container">
+          <i class="fas fa-circle progress"></i>
+          <i class="far fa-circle progress"></i>
+          <i class="far fa-circle progress"></i>
+          <i class="far fa-circle progress"></i>
+          <i class="far fa-circle progress"></i>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
