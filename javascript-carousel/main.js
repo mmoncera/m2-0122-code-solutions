@@ -4,7 +4,7 @@ Global Variables
 ************************************************
 */
 var index = 0;
-var intervalId = setInterval(changeNextPokemon, 3000);
+var intervalId = setInterval(() => changePokemon('next'), 3000);
 
 /*
 ************************************************
@@ -22,13 +22,26 @@ var $progressContainer = document.querySelector('.progress-container');
 Utility Functions
 ************************************************
 */
-function changeNextPokemon(event) {
+function changePokemon(view, event) {
   $pokemon[index].classList.add('hidden');
   $progress[index].classList.replace('fas', 'far');
-  if (index < $pokemon.length - 1) {
-    index++;
-  } else {
-    index = 0;
+  if (view === 'previous') {
+    if (index > 0) {
+      index--;
+    } else {
+      index = $pokemon.length - 1;
+    }
+  } else if (view === 'next') {
+    if (index < $pokemon.length - 1) {
+      index++;
+    } else {
+      index = 0;
+    }
+  } else if (view === 'progress') {
+    var progressIndex = [...$progress].findIndex(
+      element => event.target === element
+    );
+    index = progressIndex;
   }
   $pokemon[index].classList.remove('hidden');
   $progress[index].classList.replace('far', 'fas');
@@ -36,7 +49,7 @@ function changeNextPokemon(event) {
 
 function stopStartInterval() {
   clearInterval(intervalId);
-  intervalId = setInterval(changeNextPokemon, 3000);
+  intervalId = setInterval(() => changePokemon('next'), 3000);
 }
 
 /*
@@ -44,36 +57,23 @@ function stopStartInterval() {
 Event Listener Handlers
 ************************************************
 */
-function handleNext(event) {
-  changeNextPokemon();
+
+function handlePrevious(event) {
+  changePokemon('previous');
   stopStartInterval();
 }
 
-function handlePrevious(event) {
-  $pokemon[index].classList.add('hidden');
-  $progress[index].classList.replace('fas', 'far');
-  if (index > 0) {
-    index--;
-  } else {
-    index = $pokemon.length - 1;
-  }
-  $pokemon[index].classList.remove('hidden');
-  $progress[index].classList.replace('far', 'fas');
+function handleNext(event) {
+  changePokemon('next');
   stopStartInterval();
 }
 
 function handleProgress(event) {
-  if (event.target && event.target.matches('.progress')) {
-    var progressIndex = [...$progress].findIndex(
-      element => event.target === element
-    );
-    $pokemon[index].classList.add('hidden');
-    $progress[index].classList.replace('fas', 'far');
-    index = progressIndex;
-    $pokemon[index].classList.remove('hidden');
-    $progress[index].classList.replace('far', 'fas');
-    stopStartInterval();
+  if (!event.target.matches('.progress')) {
+    return;
   }
+  changePokemon('progress', event);
+  stopStartInterval();
 }
 
 /*
@@ -81,6 +81,6 @@ function handleProgress(event) {
 Event Listners
 ************************************************
 */
-$next.addEventListener('click', handleNext);
 $previous.addEventListener('click', handlePrevious);
+$next.addEventListener('click', handleNext);
 $progressContainer.addEventListener('click', handleProgress);
