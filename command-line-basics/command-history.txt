@@ -1,0 +1,294 @@
+    1  exit
+    2  whoami
+    3  exit
+    4  whoami
+    5  exit
+    6  whoami
+    7  exit
+    8  http 
+    9  http https://example.com
+   10  cd ../
+   11  pwd
+   12  exit
+   13  pwd
+   14  ls
+   15  cd repos
+   16  ls
+   17  cd m2-0122-code-solutions/
+   18  http https://example.com
+   19  clear
+   20  http https://example.com
+   21  http --verbose https://example.com
+   22  clear
+   23  exit
+   24  http https://example.com
+   25  cd repos/m2-0122-code-solutions/http-messages/
+   26  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   27  cd ../
+   28  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+   29  http --body GET https://example.com > http-messages/index.html
+   30  pwd
+   31  ../
+   32  cd ../
+   33  http https://example.com
+   34  http --verbose https://example.com
+   35  pwd
+   36  cd repos/
+   37  cd m2-0122-code-solutions/
+   38  cd ../
+   39  cd m2-0122-code-solutions/
+   40  exit
+   41  ls
+   42  rm check
+   43  rmdir check
+   44  ls
+   45  cd ../
+   46  cd -
+   47  cd repos/
+   48  ls
+   49  cd repos/api-example/
+   50  code -r .
+   51  -r .
+   52  touch users.html
+   53  mv users.html index.html
+   54  cd ../
+   55  mkdir check
+   56  http --verbose https://example.com
+   57  pwd
+   58  cd repos/api-example/
+   59  cd ../
+   60  ls
+   61  cd code-journal/
+   62  open 
+   63  cd ../api-example/
+   64  pwd
+   65  http https://example.com
+   66  pwd
+   67  cd repos/m2-0122-code-solutions/
+   68  git switch master
+   69  git switch javascript-ajax 
+   70  git status
+   71  git add .
+   72  git status
+   73  git commit -m "Completed javascript-ajax"
+   74  git status
+   75  git push origin javascript-ajax 
+   76  git switch master
+   77  git pull origin master 
+   78  pwd
+   79  cd repos/
+   80  cd m2-0122-code-solutions/
+   81  git branch
+   82  pwd
+   83  http --body GET https://example.com > http-messages/index.html
+   84  git status
+   85  git switch master
+   86  git status
+   87  git pull origin master
+   88  git branch
+   89  git branch javascript-ajax
+   90  git switch javascript-ajax 
+   91  cd repos/m2-0122-code-solutions/
+   92  http https://example.com
+   93  pwd
+   94  mkdir api
+   95  ls
+   96  cd repos
+   97  ls
+   98  cd ../
+   99  ls
+  100  rmdir api
+  101  ls
+  102  cd repos
+  103  ls
+  104  mkdir api-example
+  105  ls
+  106  cd api-example/
+  107  touch main.js
+  108  code -r .
+  109  code .
+  110  ls
+  111  pwd
+  112  code .
+  113  code
+  114  cd ../
+  115  ls
+  116  cd api-example
+  117  open api-example
+  118  help
+  119  quit
+  120  exit
+  121  cd repos/ajax-project/
+  122  git branch search-by-movie-title
+  123  git status
+  124  git branch
+  125  git -m search-by-movie-title issue-1-search-by-movie-title
+  126  git branch -m search-by-movie-title issue-1-search-by-movie-title
+  127  git branch
+  128  git switch issue-1-search-by-movie-title 
+  129  git branch
+  130  mv ~/d
+  131  cd ../../
+  132  ls
+  133  pwd
+  134  cd ../
+  135  pwd
+  136  cd ../
+  137  ls
+  138  cd ../
+  139  ls
+  140  cd dev
+  141  ls
+  142  cd ../home/
+  143  ls
+  144  exit
+  145  cd repos/ajax-project/
+  146  cd repos/
+  147  git clone git@github.com:mmoncera/ajax-project.git
+  148  ls
+  149  cd ajax-project/
+  150  npm ci
+  151  code .
+  152  man
+  153  help
+  154  man
+  155  help
+  156  man -k
+  157  info
+  158  history
+  159  help
+  160  code . -r
+  161  code
+  162  code .
+  163  cd repos/api-example/
+  164  cd repos/ajax-project/
+  165  git status
+  166  git add .
+  167  git commit -m 'Created a header. #1'
+  168  git status
+  169  git add .
+  170  git status 
+  171  git commit -m 'Created a header. #1'
+  172  git push origin issue-1-search-by-movie-title 
+  173  git status
+  174  git add .
+  175  git status
+  176  git restore --staged .
+  177  git status
+  178  git stauts
+  179  git status
+  180  git add .
+  181  git commit -m 'Created a search bar. #1'
+  182  git status
+  183  git push origin issue-1-search-by-movie-title 
+  184  ls
+  185  cd repos/ajax-project/
+  186  git status
+  187  git add .
+  188  git commit -m 'Added a background image. #1'
+  189  git push origin issue-1-search-by-movie-title 
+  190  cd repos/ajax-project/
+  191  git status
+  192  git add .
+  193  git commit -m 'Listened for submit events on search form. #1'
+  194  git status
+  195  git add .
+  196  git status
+  197  git commit -m 'Listened for submit events on search form. #1'
+  198  git push origin issue-1-search-by-movie-title 
+  199  git status
+  200  git add .
+  201  git commit -m 'Completed issue-1-search-by-movie-title. #1'
+  202  git status
+  203  git push origin issue-1-search-by-movie-title 
+  204  git status
+  205  git restore .
+  206  git status
+  207  git restore .
+  208  git status
+  209  git restore .
+  210  git status
+  211  git restore .
+  212  pwd
+  213  cd repos/api-example/
+  214  touch styles.css
+  215  cd repos/ajax-project/
+  216  git log
+  217  exit
+  218  cd repos/ajax-project/
+  219  git status
+  220  git add .
+  221  git status
+  222  git commit -m 'Ensured that clicking the info-card-nav-back icon goes back to the previous screen. #3'
+  223  git push origin issue-3-add-movie-to-watchlist 
+  224  git status
+  225  git add .
+  226  git commit -m 'Completed issue-3-add-movie-to-watchlist. #3'
+  227  git push origin issue-3-add-movie-to-watchlist 
+  228  git switch master
+  229  exit
+  230  cd repos/m2-0122-code-solutions/
+  231  git pull origin master
+  232  git branch command-line-basics
+  233  git switch command-line-basics 
+  234  cd command-line-basics/
+  235  pwd
+  236  man man
+  237  man cat
+  238  cat laziness.txt 
+  239  cat laziness.txt impatience.txt hubris.txt 
+  240  cat laziness.txt impatience.txt hubris.txt > three.virtues.txt
+  241  cat three.virtues.txt 
+  242  man ls
+  243  ls 
+  244  ls -a
+  245  ls -F
+  246  man ls
+  247  ls lfz-staff/
+  248  ls -aF lfz-staff > lfz-staff/contents.txt
+  249  cat lfz-staff/contents.txt 
+  250  pwd
+  251  man pwd
+  252  pwd > i-was-here.txt
+  253  ls
+  254  cat i-was-here.txt 
+  255  man echo
+  256  echo 'Hello, World!'
+  257  echo 'Hello, World!' > hello.txt
+  258  ls
+  259  cat hello.txt
+  260  man touch
+  261  touch tag-youre-it.txt
+  262  touch snoot/boop.txt
+  263  ls snoot/
+  264  man mkdir
+  265  mkdir parent
+  266  ls
+  267  mkdir -p parent/child/grandchild
+  268  mkdir x/y/z
+  269  mkdir x
+  270  mkdir x/y
+  271  rmdir x
+  272  rmdir x/y
+  273  rmdir x
+  274  touch parent/child/grandchild/.gitkeep
+  275  ls -a parent/child/grandchild/
+  276  ls -a parent
+  277  man mv
+  278  mv pokiemans/ pokemon
+  279  ls
+  280  man rm
+  281  rm lol.txt 
+  282  cat kill-me/
+  283  ls kill-me/
+  284  man echo
+  285  cat kill-me/kill-me-now.png 
+  286  rm -r kill-me/
+  287  ls
+  288  man cp
+  289  cp and-then.txt no-and-then.txt
+  290  ls
+  291  cat and-then.txt no-and-then.txt 
+  292  man history
+  293  history
+  294  history > comman-history.txt
