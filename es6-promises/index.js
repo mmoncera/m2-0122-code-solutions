@@ -7,5 +7,5 @@ takeAChancePromise
     console.log(value);
   })
   .catch(error => {
-    console.error(error);
+    console.log(error.message);
   });
