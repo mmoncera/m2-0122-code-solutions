@@ -1,7 +1,6 @@
 const express = require('express');
 const pg = require('pg');
 const app = express();
-
 const db = new pg.Pool({
   connectionString: 'postgres://dev:dev@localhost/studentGradeTable',
   ssl: {
@@ -141,6 +140,34 @@ app.put('/api/grades/:gradeId', (req, res) => {
         });
       } else {
         res.json(grade);
+      }
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({
+        error: 'An unexpected error occurred.'
+      });
+    });
+});
+
+app.delete('/api/grades/:gradeId', (req, res) => {
+  const gradeId = +req.params.gradeId;
+  const sql = `
+    DELETE FROM
+      "grades"
+    WHERE
+      "gradeId" = $1 returning *
+  `;
+  const params = [gradeId];
+  db.query(sql, params)
+    .then(data => {
+      const grade = data.rows[0];
+      if (!grade) {
+        res.status(404).json({
+          error: `Can not find grade with "gradeId" ${gradeId}.`
+        });
+      } else {
+        res.sendStatus(204);
       }
     })
     .catch(err => {
